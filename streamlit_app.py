@@ -1,6 +1,8 @@
 import os
-os.environ["STREAMLIT_RUNTIME_DIR"] = "/tmp"
-os.environ["STREAMLIT_HOME"] = "/tmp"
+
+# Force Streamlit to use a writable .streamlit folder in the current directory
+os.environ["XDG_CONFIG_HOME"] = os.getcwd()
+
 
 
 import streamlit as st
