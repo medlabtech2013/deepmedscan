@@ -1,9 +1,10 @@
 # DeepMedScan: AI-Powered Chest X-Ray Classifier with Grad-CAM
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.14-orange)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![TensorFlow](https://img.shields.io/badge/Framework-TensorFlow-orange?logo=tensorflow)
+![Keras](https://img.shields.io/badge/Keras-Model-red?logo=keras)
+![Git LFS](https://img.shields.io/badge/Git-LFS-blue)
 
 
 This project classifies chest X-rays as NORMAL or PNEUMONIA and explains its decision using Grad-CAM.
