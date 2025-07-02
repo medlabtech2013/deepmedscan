@@ -2,23 +2,21 @@ import os
 os.environ["STREAMLIT_RUNTIME_DIR"] = "/tmp"
 os.environ["STREAMLIT_HOME"] = "/tmp"
 
-
 import streamlit as st
 import numpy as np
 import tensorflow as tf
 import cv2
 from PIL import Image
 import tempfile
-import os
 
 # Load model
 model_path = "deepmedscan_model.h5"
 model = tf.keras.models.load_model(model_path)
 
-# Force model to build (important for Sequential models)
+# Force model to build
 _ = model.predict(np.zeros((1, 150, 150, 3)))
 
-# Get the last Conv2D layer name
+# Get last Conv2D layer name
 conv_layer_names = [layer.name for layer in model.layers if isinstance(layer, tf.keras.layers.Conv2D)]
 if not conv_layer_names:
     st.error("No Conv2D layers found for Grad-CAM.")
