@@ -1,7 +1,8 @@
 import os
 
-# Force Streamlit to use a writable .streamlit folder in the current directory
-os.environ["XDG_CONFIG_HOME"] = os.getcwd()
+# ✅ Force config to local directory to avoid /.streamlit permission error on HF Spaces
+os.makedirs('.streamlit', exist_ok=True)
+os.environ["STREAMLIT_CONFIG_DIR"] = os.path.abspath(".streamlit")
 
 
 
