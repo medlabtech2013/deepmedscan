@@ -1,3 +1,8 @@
+import os
+os.environ["STREAMLIT_RUNTIME_DIR"] = "/tmp"
+os.environ["STREAMLIT_HOME"] = "/tmp"
+
+
 import streamlit as st
 import numpy as np
 import tensorflow as tf
